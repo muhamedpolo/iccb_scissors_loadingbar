@@ -1,3 +1,32 @@
-
-<!DOCTYPE html><html data-bs-theme="light" lang="en">
-<p>Hello</p></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canva Embed Test</title>
+  <style>
+    #progress-bar {
+      width: 0%;
+      height: 30px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      line-height: 30px;
+    }
+    #container {
+      width: 100%;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h2>Progress</h2>
+  <div id="container">
+    <div id="progress-bar">0%</div>
+  </div>
+  <script>
+    const progress = 72;
+    const bar = document.getElementById('progress-bar');
+    bar.style.width = progress + '%';
+    bar.textContent = progress + '%';
+  </script>
+</body>
+</html>
