@@ -1,25 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Progress</title>
-  <style>
-    #bar { width: 0; height: 30px; background: green; }
-  </style>
-</head>
-<body>
-  <div style="border:1px solid #ccc; width: 100%;">
-    <div id="bar"></div>
-  </div>
-  <p id="text">Loading...</p>
-
-  <script>
-    fetch('data.json')
-      .then(r => r.json())
-      .then(d => {
-        const pct = Math.round((d.current / d.total) * 100);
-        document.getElementById("bar").style.width = pct + "%";
-        document.getElementById("text").innerText = `${d.current} / ${d.total} (${pct}%)`;
-      });
-  </script>
-</body>
-</html>
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Home - Canva Premium Rooms</title><meta property="og:image" content="assets/img/logo.png"><meta property="og:type" content="website"><link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png"><link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png"><link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png"><link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png"><link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png"><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap"><link rel="stylesheet" href="assets/css/styles.min.css"><script>
+    // Disable right-click and Inspect Element
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+ 
+ function ctrlShiftKey(e, keyCode) {
+     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+ }
+ 
+ document.onkeydown = (e) => {
+     // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+     if (
+     event.keyCode === 123 ||
+     ctrlShiftKey(e, 'I') ||
+     ctrlShiftKey(e, 'J') ||
+     ctrlShiftKey(e, 'C') ||
+     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+     )
+     return false;
+ };
+<p>test</p>
+</body></html>
